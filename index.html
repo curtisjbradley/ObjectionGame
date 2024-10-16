@@ -5,13 +5,32 @@
     <title>js-dos api</title>
     <style type="text/css">
         .dosbox-container { width: 640px; height: 400px; }
-        .dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/digger.png); }
+        .dosbox-container > .dosbox-overlay { }
     </style>
 </head>
 <body>
 <div id="dosbox"></div>
 <br/>
 <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+<div>
+    <p>
+        <b>Q</b> - Proper question (No Objection)<br>
+        <b>A</b> - Argumentative<br>
+        <b>B</b> - Best Evidence Rule - (Asking for hearsay rather than referencing a report)<br>
+        <b>C</b> - Calls for a conclusion of ultimate fact<br>
+        <b>F</b> - Lack of foundation<br>
+        <b>H</b> - Hearsay<br>
+        <b>I</b> - Irrelevant<br>
+        <b>L</b> - Leading<br>
+        <b>M</b> - Compound question<br>
+        <b>P</b> - Violates a privilege. (Attorney-Client, Doctor-Patient, etc.)<br>
+        <b>S</b> - Speculation<br>
+        <b>V</b> - Vague or Ambiguous<br>
+
+
+    </p>
+</div>
+
 
 <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
 <script type="text/javascript">
@@ -21,7 +40,7 @@
             dosbox.run("./Objection_1992.zip", "./Objectio/OBJECT.EXE");
         },
         onrun: function (dosbox, app) {
-            console.log("App '" + app + "' is runned");
+            console.log("App '" + app + "' started.");
         }
     });
 </script>
