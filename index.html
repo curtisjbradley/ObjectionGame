@@ -2,16 +2,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>js-dos api</title>
-    <style type="text/css">
-        .dosbox-container { width: 640px; height: 400px; }
+    <title>Objection Game</title>
+    <style>
+        .dosbox-container {height: 60%; aspect-ratio: 16 / 10; align-content: center }
         .dosbox-container > .dosbox-overlay { }
     </style>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styl.css">
 </head>
 <body>
 <div id="dosbox"></div>
 <br/>
-<button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+
+<div>
+    <button onclick="dosbox.requestFullScreen();">Make Fullscreen</button>
+    <button id="showleader" onclick="showPopup()">Leaderboard</button>
+</div>
+
+<div id="leaderboard" class="popup">
+    <div class="popup-content">
+        <h1>
+            Leaderboard
+        </h1>
+        <table>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Score
+                </th>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+        <p><a href="mailto:curtisbradley@slcusd.org">Email me</a> with your score to be added. (curtisbradley@slcusd.org)</p>
+        <button id="closeleader" onclick="closePopup()">Close</button>
+    </div>
+
+</div>
+
+
 <div>
     <p>
         <b>Q</b> - Proper question (No Objection)<br>
@@ -26,8 +58,6 @@
         <b>P</b> - Violates a privilege. (Attorney-Client, Doctor-Patient, etc.)<br>
         <b>S</b> - Speculation<br>
         <b>V</b> - Vague or Ambiguous<br>
-
-
     </p>
 </div>
 
